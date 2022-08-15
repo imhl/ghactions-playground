@@ -13,4 +13,4 @@ jobs:
         run: |
           node -v
           npm -v
-          apt install nano wget curl -y
+          sudo apt-get install nano wget curl -y
