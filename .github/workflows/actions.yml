@@ -1,12 +1,30 @@
 name: Actions Workflow
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   pull_request:
-    types: [closed,assigned,opened,reopened]
+    
   # push:
+  #   branches:
+  #     - master
+  #     - 'feature/*' #matches feature/featA, feature/featB, doesnt match feature/feat/a
+  #     - 'feature/**'
+  #     - '!feature/featC'
+    
+    # tags:
+    #   - v1.*
+    
+    # paths:
+    #   - '**.js'
+
+  # paths-ignore
+  #tags-ignore
+  #branches-ignore    
+  # schedule:
+  #   - cron: "*/5 * * * *"
   # pull_request:
   #   types: [closed,assigned,opened,reopened]
+  # # push:
+  # # pull_request:
+  # #   types: [closed,assigned,opened,reopened]
     
     
 jobs:
