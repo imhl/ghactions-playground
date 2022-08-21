@@ -23,7 +23,7 @@ jobs:
           cat random.txt
 
       - name: push to repo
-        uses: ad-m/github-push-action@develop
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: ${{github.ref}}
