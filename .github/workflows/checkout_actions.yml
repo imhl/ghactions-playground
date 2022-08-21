@@ -20,6 +20,7 @@ jobs:
           git config --global user.name "bot1"
           git config --global user.email "bot1@bot.com"
           echo $RANDOM >> random.txt
+          git commit -am "add new random number"
           cat random.txt
 
       - name: push to repo
