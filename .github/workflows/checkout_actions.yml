@@ -1,0 +1,31 @@
+name: Checkout using Github actions
+on:
+  push:
+    
+
+jobs:
+  push-using-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code from git using actions
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: develop
+
+      - name: set git info
+        run: |
+          ls -la
+          git config --global user.name "bot1"
+          git config --global user.email "bot1@bot.com"
+          echo $RANDOM >> random.txt
+          cat random.txt
+
+      - name: push to repo
+        uses: ad-m/github-push-action@develop
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          branch: ${{github.ref}}
+
+
