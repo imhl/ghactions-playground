@@ -1,6 +1,6 @@
 name: Checkout using Github actions
 on:
-  push:
+  pull_request:
     
 
 jobs:
